@@ -1,14 +1,14 @@
 /********************************
- * JS对象
+ * JS函数
  * Author: George Wayne
  ********************************/
 
 
 /**
- * JS创建对象的方式：对象自面量的方式、直接new内置对象的方式、自定义对象构造
+ * JS创建对象的方式：Json的方式、直接new内置对象的方式、自定义对象构造
  **/
 
-/*************** 1、对象自面量的方式 ***************/
+/*************** 1、Json的方式 ***************/
 var car = {
     name: 'Jeep',
     color: 'red',
@@ -18,7 +18,7 @@ car.age = '2 years';
 console.log('Json的方式', car.name, car.price, car.age, car);
 
 
-/*************** 2、new对象实例的方式 ***************/
+/*************** 2、直接new内置对象的方式 ***************/
 var dog = new Object();
 dog.name = 'HaHa';
 dog.color = 'white';
@@ -49,4 +49,7 @@ console.log('create的方式', wayne.color);
 
 /**
  * JS创建对象内置方法：defineProperty、hasOwnProperty、、
+ * http://www.cnblogs.com/bronte/articles/2719630.html
+ * http://blog.sina.com.cn/s/blog_7aa12ae60100tmo4.html
+ * http://www.jb51.net/article/27855.htm
  **/
