@@ -89,3 +89,15 @@ a8.join('+');//输出'a+b+c+d', a8输出['a', 'b', 'c', 'd']
 //将数组原样转换成字符串，输出字符串，不改变原数组
 var a8 = ['a', 'b', 'c', 'd'];
 a8.toString();//输出"a,b,c,d", a8输出['a', 'b', 'c', 'd']
+
+/********* 示例 ********/
+var tmp = [], a = [1, [2, [3, [4, "null"]]]];
+function loop(arr) {
+    tmp = tmp.length ? [tmp] : ['null'];
+    tmp.unshift(arr[0]);
+    if (Object.prototype.toString.apply(arr[1]) === '[object Array]') {
+        loop(arr[1]);
+    }
+    return tmp;
+}
+loop(a);

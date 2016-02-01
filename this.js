@@ -50,3 +50,6 @@ foo.func(); // 输出 foobar
 name = 'global';
 func = someuser.func;
 func(); // 输出 global
+
+var string='jack how many meals do you have a day?';
+string.replace('/a/', '111');
