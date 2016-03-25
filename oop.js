@@ -69,19 +69,20 @@ function Book(name, price) {//第一步：必须是构造函数
 Book.prototype.outPrice = function () {//用prototype给函数添加属性
     console.log('page', this.price);
 };
+
 var book = new Book('上下五千年', 60);
 book.outPrice();//根据原型链检索
 console.log('book', book.name, book.price);
 
 function History() {
 }
+
 History.prototype = new Book('历史书', 35);
 History.prototype.size = 'small';
 var his = new History();
 History.prototype.color = 'yellow';
 his.outPrice();
 console.log('his', his.color, his.name, his.price, his.size);
-
 
 /*************** 4、call() 和 apply()方式 ***************/
 function Skye(age, gender) {
